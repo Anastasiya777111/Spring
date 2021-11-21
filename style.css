@@ -1,0 +1,171 @@
+body{
+    margin: 0;
+}
+
+html{
+    font-size: 100%;
+    font-family: Open Sans,sans-serif;
+}
+
+#nav-menu{
+    padding-top: 8px;
+    padding-bottom: 8px;
+    position: relative;
+    background: #fff;
+    border-bottom: 1px solid #ebf2f2;
+}
+
+@media (max-width: 1200px) and (min-width: 900px){
+#nav-menu{
+    padding-right: 20px;
+}
+}
+
+@media (max-width: 900px){
+#nav-menu {
+    position: fixed;
+    width: 100%;
+    border-bottom: 1px solid #ebf2f2;
+}
+}
+
+.container{
+    display: flex;
+    max-width: 1200px;
+    padding: 0 20px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+#Logo{
+    height: 48px;
+    max-width: 250px;
+}
+
+@media (max-width: 1100px){ 
+    #Logo {
+    height: 30px;
+}
+}
+
+.header_logo{
+    display: block;
+}
+
+#menu_items{
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    width: 700px;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 1rem;
+
+}
+
+@media (max-width: 900px){
+#menu_items {
+    display: none;
+}
+}
+
+.dropdownMenu{
+    transform: rotate(45deg) translateY(-6px);
+    -webkit-transform: rotate(45deg) translateY(-6px);
+    border: solid #191e1e;
+    border-width: 0 1px 1px 0;
+    display: inline-block;
+    padding: 3px;
+    margin-left: 5px;
+}
+
+
+  
+  li {
+    color:inherit;
+    display: block;
+    float: left;
+    padding: 1rem;
+    position: relative;
+    text-decoration: none;
+  }
+    
+  li a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  li:hover {
+    cursor: pointer;
+  }
+  
+  ul li ul {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    display: none;
+  }
+  
+  ul li:hover > ul,
+  ul li ul:hover {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+    background: #fff;
+    width: 190px;
+    box-shadow: 0 5px 30px 0 rgb(108 135 135 / 50%);
+    top: 45px;
+    padding: 25px 15px;
+  }
+  
+  ul li ul li {
+    clear: both;
+    width: 100%;
+    padding: 5px;
+  }
+
+  ul li ul li:hover{
+      color: green;
+  }
+
+.allProjects{
+    display: inline-block;
+    color: blue;
+    margin-bottom: 20px;
+}
+
+.uppCase{
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+.smallVersion{
+    display: none;
+}
+
+@media (max-width: 900px){
+    .smallVersion {
+    display: block;
+    position: fixed;
+    right: 15px;
+    top: 8px;
+}
+}
+
+@media (max-width: 900px){
+.hamburger {
+    padding: 10px;
+}}
+
+.burger {
+    width: 19px;
+    height: 3px;
+    background: #191e1e;
+    margin: 0 0 3px;
+}
+
+
+
