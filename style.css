@@ -169,3 +169,53 @@ html{
 
 
 
+#pr{
+    padding-top: 80px;
+}
+
+.cont{
+    max-width: 1200px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.h1{
+    font-size: 3.75rem;
+    line-height: 1em;
+    margin-top: 0.4em;
+    margin-bottom: 0.4em; 
+    font-family: Metropolis,sans-serif;
+}
+
+@media (max-width: 800px){
+.h1 {
+    font-size: 3rem;
+}
+}
+
+p{
+    max-width: 990px;
+    line-height: 1.7em;
+}
+
+.desc{
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-family: Metropolis,sans-serif;
+}
+
+@media (max-width: 800px){
+.desc {
+    font-size: 1.25rem;
+}
+}
+
+.bot{
+    margin-bottom: 80px;
+}
+
+@media (max-width: 800px){
+.bot {
+    margin-bottom: 50px;
+}
+}
