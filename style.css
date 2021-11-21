@@ -179,7 +179,7 @@ html{
     margin: 0 auto;
 }
 
-.h1{
+.h1Project{
     font-size: 3.75rem;
     line-height: 1em;
     margin-top: 0.4em;
@@ -188,7 +188,7 @@ html{
 }
 
 @media (max-width: 800px){
-.h1 {
+.h1Project{
     font-size: 3rem;
 }
 }
@@ -291,17 +291,12 @@ a:hover {
 }
 }
 
-.textCard{
+.sizeTextCard{
     width: 80%;
 }
 
-.h3{
+.cardDesc{
     font-size: 1.5rem;
-    margin-top: 0.4em;
-    margin-bottom: 0.4em;
-}
-
-.marg{
     margin:0
 }
 
