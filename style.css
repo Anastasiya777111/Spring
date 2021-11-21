@@ -219,3 +219,92 @@ p{
     margin-bottom: 50px;
 }
 }
+
+.mainContent{
+    background-color: #ebf2f2;
+    padding: 50px 0;
+}
+
+.containerMain{
+    max-width: 900px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.displ-1{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.card{
+    padding: 40px 30px;
+    margin-bottom: 25px;
+    width: 49%;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    border: 1px solid #d9e9e9;
+background-color:white;
+}
+
+
+
+@media (max-width: 800px){
+    .card {
+        width: 100%;
+    }
+    }
+
+a:hover {
+    cursor: pointer;
+}
+
+.shadow{
+    transition: all .2s,transform .2s;
+    transform: translateY(0);
+    position: relative;
+    box-shadow: none;
+    top: 0;
+}
+
+.shadow:focus, .shadow:hover {
+    transform: translateY(-3px);
+    top: -3px;
+    box-shadow: 0 10px 20px 0 rgb(108 135 135 / 20%);
+}
+
+.iconCard{
+    width: 18.5%;
+    align-self: flex-start;
+}
+
+.iconCardSmall {
+    height: 60px;
+}
+
+@media (max-width: 800px){
+.iconCardSmall {
+    height: auto;
+    max-height: 60px;
+    max-width: 70px;
+}
+}
+
+.textCard{
+    width: 80%;
+}
+
+.h3{
+    font-size: 1.5rem;
+    margin-top: 0.4em;
+    margin-bottom: 0.4em;
+}
+
+.marg{
+    margin:0
+}
+
+img{
+    max-width: 100%;
+}
