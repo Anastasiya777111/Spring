@@ -102,15 +102,15 @@ html{
     cursor: pointer;
   }
   
-  ul li ul {
+  .dropdown {
     visibility: hidden;
     opacity: 0;
     position: absolute;
     display: none;
   }
   
-  ul li:hover > ul,
-  ul li ul:hover {
+  .menu:hover > ul,
+  .dropdown:hover {
     visibility: visible;
     opacity: 1;
     display: block;
@@ -121,13 +121,13 @@ html{
     padding: 25px 15px;
   }
   
-  ul li ul li {
+  .ElemDropdownMenu{
     clear: both;
     width: 100%;
     padding: 5px;
   }
 
-  ul li ul li:hover{
+  .ElemDropdownMenu:hover{
       color: green;
   }
 
@@ -135,11 +135,13 @@ html{
     display: inline-block;
     color: blue;
     margin-bottom: 20px;
+    
 }
 
 .uppCase{
     text-transform: uppercase;
     font-size: 0.8rem;
+    padding: 5px;
 }
 
 .smallVersion{
@@ -169,7 +171,7 @@ html{
 
 
 
-#pr{
+.pr{
     padding-top: 80px;
 }
 
