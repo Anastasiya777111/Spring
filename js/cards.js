@@ -1,4 +1,4 @@
-const data=[
+const cards=[
     {
         img: 'img/CardImg1.svg',
         title: 'Spring Boot',

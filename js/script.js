@@ -2,6 +2,8 @@ const cardBox = document.querySelector('.mainContent .containerMain .displ1');
 
 const searchInput = document.querySelector('#search');
 
+const elemHeader = document.querySelector('.menuItems');
+
 function getCardHtml(el) {
     return `
         <a class="card shadow">
@@ -33,8 +35,8 @@ function getCardHtml(el) {
   }
 
   function renderFirst() {
-    for (let i = 0; i < data.length; i++) {
-      const cardHtml = getCardHtml(data[i]);
+    for (let i = 0; i < cards.length; i++) {
+      const cardHtml = getCardHtml(cards[i]);
       cardBox.insertAdjacentHTML('beforeEnd', cardHtml);
     }
   }
@@ -42,7 +44,7 @@ function getCardHtml(el) {
   renderFirst();
 
   searchInput.addEventListener('keyup', e => {
-    const result = data.filter(word =>
+    const result = cards.filter(word =>
       word.title.toLowerCase().includes(e.target.value.toLowerCase())||
       word.desc.toLowerCase().includes(e.target.value.toLowerCase())    
     );
@@ -59,3 +61,36 @@ function getCardHtml(el) {
   });
 
   
+  function getHeaderElem(el) {
+    let section=``;
+    if(el.article){
+    for(let i=0; i< el.article.length; i++){
+      section+=`
+      <li class="${el.article[i].elementClass}"><a href="#">${el.article[i].headerSubElem}</a></li>
+      `;
+      }
+    }
+    else{
+      return`
+      <li><span>${el.headerElem}</span></li>
+      `
+    }
+    return `
+    <li class="menu">
+    <span>${el.headerElem}</span>
+    <div class="dropdownMenu"></div>
+    <ul class="dropdown">
+    ${section}
+    </ul>
+  </li>
+    `;
+  }
+
+  function elemHeaderMenu() {
+    for (let i = 0; i < menu.length; i++) {
+      const headerHtml = getHeaderElem(menu[i]);
+      elemHeader.insertAdjacentHTML('beforeEnd', headerHtml);
+    }
+  }
+  
+  elemHeaderMenu();
