@@ -13,66 +13,7 @@
          <nav class="navMenu">
              <div class="container">
                 <img class="logo" class="headerLogo" src="img/logo.svg" alt='logoSpring'>
-                <ul class="menuItems">
-                    <li class="menu">
-                        <span>Why Spring</span>
-                        <div class="dropdownMenu"></div>
-                        <ul class="dropdown">
-                            <li class="elemDropdownMenu"><a href="#">Overview</a></li>
-                            <li class="elemDropdownMenu"><a href="#">Microservices</a></li>
-                            <li class="elemDropdownMenu"><a href="#">Reactive</a></li>
-                            <li class="elemDropdownMenu"><a href="#">Event Driven</a></li>
-                            <li class="elemDropdownMenu"><a href="#">Cloud</a></li>
-                            <li class="elemDropdownMenu"><a href="#">Web Applications</a></li>
-                            <li class="elemDropdownMenu"><a href="#">Serverless</a></li>
-                            <li class="elemDropdownMenu"><a href="#">Batch</a></li>
-                          </ul>
-                    </li>
-                    <li class="menu">
-                        <span>Learn</span>
-                        <div class="dropdownMenu"></div>
-                        <ul class="dropdown">
-                            <li class="elemDropdownMenu"><a href="#">Overview</a></li>
-                            <li class="elemDropdownMenu"><a href="#">Quickstart</a></li>
-                            <li class="elemDropdownMenu"><a href="#">Guides</a></li>
-                            <li class="elemDropdownMenu"><a href="#">Blog</a></li>
-                          </ul>
-                    </li>
-                    <li class="menu">
-                        <span>Projects</span>
-                        <div class="dropdownMenu"></div>
-                        <ul class="dropdown">
-                            <li class="elemDropdownMenu"><a href="#">Overview</a></li>
-                            <li class="elemDropdownMenu"><a href="#">Spring Boot</a></li>
-                            <li class="elemDropdownMenu"><a href="#">Spring Framework</a></li>
-                            <li class="elemDropdownMenu"><a href="#">Spring Cloud</a></li>
-                            <li class="elemDropdownMenu"><a href="#">Spring Cloud Data Flow</a></li>
-                            <li class="elemDropdownMenu"><a href="#">Spring Data</a></li>
-                            <li class="elemDropdownMenu"><a href="#">Spring Integration</a></li>
-                            <li class="elemDropdownMenu"><a href="#">Spring Batch</a></li>
-                            <li class="elemDropdownMenu"><a href="#">Spring Security</a></li>
-                            <li class="allProjects elemDropdownMenu"><a href="#">View all projects</a></li>
-                            <li class="uppCase">Development tools</li>
-                            <li class="elemDropdownMenu"><a href="#">Spring Tools 4</a></li>
-                            <li class="elemDropdownMenu"><a href="#">Spring Initializr</a></li>
-                          </ul>
-                    </li>
-                    <li>
-                        <span>Training</span>
-                    </li>
-                    <li>
-                        <span>Support</span>
-                    </li>
-                    <li class="menu">
-                        <span>Community</span>
-                        <div class="dropdownMenu"></div>
-                        <ul class="dropdown">
-                            <li class="elemDropdownMenu"><a href="#">Overview</a></li>
-                            <li class="elemDropdownMenu"><a href="#">Events</a></li>
-                            <li class="elemDropdownMenu"><a href="#">Team</a></li>
-                          </ul>
-                    </li>
-                </ul>
+                <ul class="menuItems"></ul>
              </div>
 </nav>
 <div class="smallVersion">
@@ -83,6 +24,8 @@
     </div>
 </div>
 </header>
+
+
 
 
 <div>
@@ -97,81 +40,24 @@
 </div>
 
 
-
-<div class="mainContent">
+<div class="mainContent">   
+<div class="mainSearchBox">
+    <input
+      class="mainSearch"
+      type="search"
+      id="search"
+      name="searchBar"
+      placeholder="Search for article"
+    />
+  </div>
     <div class="containerMain">
-    <div class="displ1">
-        <a class="card shadow">
-            <div class="iconCard">
-                <img class="iconCardSmall" src="img/CardImg1.svg">
-            </div>
-            <div class="sizeTextCard">
-                <h3 class="cardDesc">Spring Boot</h3>
-                <p>
-                    Takes an opinionated view of building Spring applications and gets you up and running as quickly as possible.
-                </p>
-            </div>
-        </a>
-        <a class="card shadow">
-            <div class="iconCard">
-                <img class="iconCardSmall" src="img/CardImg2.svg">
-            </div>
-            <div class="sizeTextCard">
-                <h3 class="cardDesc">Spring Framework</h3>
-                <p>
-                    Provides core support for dependency injection, transaction management, web apps, data access, messaging, and more.
-                </p>
-            </div>
-        </a>
-        <a class="card shadow">
-            <div class="iconCard">
-                <img class="iconCardSmall" src="img/CardImg3.svg">
-            </div>
-            <div class="sizeTextCard">
-                <h3 class="cardDesc">Spring Data</h3>
-                <p>
-                    Provides a consistent approach to data access – relational, non-relational, map-reduce, and beyond.
-                </p>
-            </div>
-        </a>
-        <a class="card shadow">
-            <div class="iconCard">
-                <img class="iconCardSmall" src="img/CardImg4.svg">
-            </div>
-            <div class="sizeTextCard">
-                <h3 class="cardDesc">Spring Cloud</h3>
-                <p>
-                    Provides a set of tools for common patterns in distributed systems. Useful for building and deploying microservices.
-                </p>
-            </div>
-        </a>
-        <a class="card shadow">
-            <div class="iconCard">
-                <img class="iconCardSmall" src="img/CardImg5.svg">
-            </div>
-            <div class="sizeTextCard">
-                <h3 class="cardDesc">Spring Cloud Data Flow</h3>
-                <p>
-                    Provides an orchestration service for composable data microservice applications on modern runtimes.
-                </p>
-            </div>
-        </a>
-        <a class="card shadow">
-            <div class="iconCard">
-                <img class="iconCardSmall" src="img/CardImg6.svg">
-            </div>
-            <div class="sizeTextCard">
-                <h3 class="cardDesc">Spring Security</h3>
-                <p>
-                    Protects your application with comprehensive and extensible authentication and authorization support.
-                </p>
-            </div>
-        </a>
+        <div class="displ1">
 </div>
-    </div>
+</div>
 </div>
 
-
-
+<script src="js/cards.js"></script>
+<script src="js/headerMenu.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
