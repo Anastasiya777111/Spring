@@ -4,6 +4,11 @@ const searchInput = document.querySelector('#search');
 
 const elemHeader = document.querySelector('.menuItems');
 
+const displ1 = document.querySelector('.displ1')
+
+const hamburger = document.querySelector(".hamburger");
+
+
 function getCardHtml(el) {
     return `
         <a class="card shadow">
@@ -72,17 +77,19 @@ function getCardHtml(el) {
     }
     else{
       return`
-      <li><span>${el.headerElem}</span></li>
+      <li class="nav-link menu"><span>${el.headerElem}</span></li>
       `
     }
     return `
+    <div class = "M" >
     <li class="menu">
-    <span>${el.headerElem}</span>
+    <span class="nav-link">${el.headerElem}</span>
     <div class="dropdownMenu"></div>
-    <ul class="dropdown">
+  </li>
+  <ul class="dropdown">
     ${section}
     </ul>
-  </li>
+    </div>
     `;
   }
 
@@ -94,3 +101,17 @@ function getCardHtml(el) {
   }
   
   elemHeaderMenu();
+
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    elemHeader.classList.toggle("active");
+    if(hamburger.className.split(' ').length===2){
+    document.getElementsByClassName('displ1')[0].style= "visibility: hidden";
+  }else{
+    document.getElementsByClassName('displ1')[0].style= "visibility: visible";
+  }
+})
+  document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+  
+  }))
+
