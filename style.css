@@ -154,8 +154,8 @@ html{
 
 @media (max-width: 900px){
   
-    .M:hover > ul,
-    .dropdown:hover {
+    .M,
+    .dropdown.active {
         position: relative;
       visibility: visible;
       opacity: 1;
@@ -187,18 +187,20 @@ html{
     width: 100%;
     height: 100%;
     max-width: 100%;
-    left: -100%;
-    top: -10px;
+    margin: 0;
+    top:-100%;
     flex-direction: column;
     background-color: #262626;
    align-items: start;
    padding: 80px 60px 60px 40px;
     transition: 0.3s;
     box-sizing: border-box;
+    opacity: 0;
   }
 
   .menuItems.active{
-    left: 0;
+      top:0;
+      opacity: 1;
 }
 .menu{
     display: flex;
@@ -340,6 +342,10 @@ p{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+}
+
+.displ1.active{
+    display: none;
 }
 
 .noResults{
