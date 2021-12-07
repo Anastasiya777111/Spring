@@ -188,19 +188,18 @@ html{
     height: 100%;
     max-width: 100%;
     margin: 0;
-    top:-100%;
+    left: -100%;
+    top: 0px;
     flex-direction: column;
     background-color: #262626;
    align-items: start;
    padding: 80px 60px 60px 40px;
     transition: 0.3s;
     box-sizing: border-box;
-    opacity: 0;
   }
 
   .menuItems.active{
-      top:0;
-      opacity: 1;
+    left: 0;
 }
 .menu{
     display: flex;
@@ -217,7 +216,7 @@ html{
     transition: color .2s; 
     padding-right: 30px;
 }
-.dropdownMenu:hover{
+.dropdownMenu.active{
     -webkit-transform: rotate(45deg) translateY(15px) scale(-1);
 }
 .dropdownMenu{

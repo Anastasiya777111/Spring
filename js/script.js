@@ -27,12 +27,12 @@ function getCardHtml(el) {
 
  function searchFilter(result) {
   result.forEach(el => {
-       cardBox.insertAdjacentHTML('afterbegin', getCardHtml(el));
+    cardBox.innerHTML+=getCardHtml(el);
     });
   }
   
   function errorString() {
-      cardBox.insertAdjacentHTML('afterbegin', `<p class="noResults">No results</p>`);
+    cardBox.innerHTML=`<p class="noResults">No results</p>`;
   }
 
   function clearCardBox() {
@@ -41,8 +41,7 @@ function getCardHtml(el) {
 
   function renderFirst() {
     for (let i = 0; i < cards.length; i++) {
-      const cardHtml = getCardHtml(cards[i]);
-      cardBox.insertAdjacentHTML('beforeEnd', cardHtml);
+      cardBox.innerHTML+=getCardHtml(cards[i]);
     }
   }
   
@@ -95,8 +94,7 @@ function getCardHtml(el) {
 
   function elemHeaderMenu() {
     for (let i = 0; i < menu.length; i++) {
-      const headerHtml = getHeaderElem(menu[i]);
-      elemHeader.insertAdjacentHTML('beforeEnd', headerHtml);
+      elemHeader.innerHTML+=getHeaderElem(menu[i]);
     }
   }
   
@@ -115,10 +113,14 @@ function getCardHtml(el) {
     if(hamburger.className.split(' ').length===2){
       displ1.classList.add("active")
     }else{
-      setTimeout(() => displ1.classList.remove("active"), 50)
+      setTimeout(() => displ1.classList.remove("active"), 188)
     }
   })
 
   document.querySelectorAll(".M").forEach(n => n.addEventListener("click", () => 
   {n.querySelector(".dropdown").classList.toggle("active");
+  }))
+
+  document.querySelectorAll(".M").forEach(n => n.addEventListener("click", () => 
+  {n.querySelector(".dropdownMenu").classList.toggle("active");
   }))
